@@ -1,1 +1,1 @@
-<img src=""></img>
+<img src="SiteStreamingV3/image/icon.png"></img>
