@@ -10,8 +10,8 @@
     }
     $film_rechercher = $_POST['search'];
     $film_rechercher = strtolower(str_replace(" ","-", $film_rechercher));
-    $liste_films = "<header>\n<div class='logo'></div>\n<div class='search'>\n<input type='text' id='search' value='' placeholder='Rechercher un film'>\n<button class='BT_search' onclick=recherche()>Rechercher</button>\n</div>\n<button class='Refresh_Moovie' onclick=refresh()>actualiser la liste de film</button>\n</header>\n";
-    $recherche = "<div class='res_recherche'><button class='annuler' onClick=window.location.reload();>X</button><h2>Recherche :". $_POST['search']."</h2></div><div class='liste_films'>\n";
+    $liste_films = "<header>\n<div class='header_main'>\n<div class='logo'></div>\n<div class='search' onclick=search()></div>\n<button class='Refresh_Moovie' onclick=refresh()><div class='img_refresh'></button>\n</div>\n";
+    $recherche = "<div class='res_recherche'><button class='annuler' onClick=window.location.reload();>X</button><a style='margin-left: 5%;'>Recherche :". $_POST['search']."</a></div>\n</header>\n<div class='popup_blur' id='popup_blur' onclick=close_search()></div><div class='popup_search' id='popup_search'><div class='bt_search' onclick=recherche()></div><input class='input_search' id='input_search' type='text' placeholder='Search...'></div><div class='liste_films'>\n";
     $liste_films .= $recherche;
     $sql = 'SELECT * FROM moovie WHERE moovieName LIKE "%'.$film_rechercher.'%"';
     $req = $BDD->query($sql);

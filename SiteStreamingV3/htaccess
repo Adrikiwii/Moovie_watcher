@@ -1,0 +1,2 @@
+ErrorDocument 400 https://freestreaming.free.nf/error.html
+ErrorDocument 404 https://freestreaming.free.nf/error.html
