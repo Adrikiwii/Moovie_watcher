@@ -1,7 +1,7 @@
 <?php
     $servername = 'sql112.infinityfree.com';
     $username = 'if0_37526750';
-    $password = 'Adri65ktm';
+    $password = '';
     try {
         $BDD = new PDO("mysql:host=$servername;dbname=if0_37526750_db_moovie", $username, $password);
         $BDD->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
